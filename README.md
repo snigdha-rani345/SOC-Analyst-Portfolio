@@ -113,11 +113,11 @@ My objective is to start my carrer as a SOC Analyst and continuously enhance my 
 - Perform advanced threat hunting
 - Master SOC workflows
 
-#  Connect With Me
+##  Connect With Me
 
 - GitHub: https://github.com/snigdha-rani345
 
-- LinkedIn: https://www.linkedin.com/in/snigdha-rani-das
+- LinkedIn: https://www.linkedin.com/in/snigdha-rani-das-445146354/
 
 - Email: dsnigdharani130@email.com
 
