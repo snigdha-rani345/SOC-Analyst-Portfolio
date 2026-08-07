@@ -1,0 +1,48 @@
+PHISH-002 — SIMULATED WINDOWS POWERSHELL EVENT
+
+Event ID: 4688
+Event Provider: Microsoft-Windows-Security-Auditing
+Event Type: Process Creation
+
+Time:
+2026-08-07 10:42:18 UTC
+
+Host:
+WS-FINANCE-07
+
+User:
+alex.morgan
+
+Parent Process:
+WINWORD.EXE
+
+Parent Process Path:
+C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE
+
+Created Process:
+powershell.exe
+
+Process Path:
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+
+Command Line:
+powershell.exe -NoProfile -ExecutionPolicy Bypass -EncodedCommand <SIMULATED_BASE64>
+
+Parent Process ID:
+4216
+
+New Process ID:
+8740
+
+Network Connection:
+203.0.113.50:443
+
+Event Description:
+A Microsoft Word process launched PowerShell with an
+ExecutionPolicy Bypass parameter and an encoded command.
+
+Simulation Notice:
+This is fictional security-training evidence.
+The encoded command is intentionally simulated and does
+not contain a real malicious payload.
+No real malware or malicious command is being executed.
