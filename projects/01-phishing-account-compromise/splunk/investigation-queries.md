@@ -185,7 +185,6 @@ The query identifies three events associated with user alex.morgan from source I
 Two successful authentication events occurred at 14:49:41 and 14:51:03. These were followed by a session_created event at 14:52:17.
 
 The sequence indicates that successful authentication was followed by the creation of an active session. Because this activity occurred in the context of the phishing investigation, the source IP and authentication events should be correlated with the phishing URL activity and other account activity to determine whether the access was authorized.
----
 
 # Query 5 — Authentication Activity by Source IP
 
