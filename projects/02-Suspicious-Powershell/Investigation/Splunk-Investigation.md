@@ -162,19 +162,35 @@ index=phish002 dest_ip="203.0.113.50"
 
 ![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-04-powershell.png)
 
-## What the Events Show
+##  What the Events Show
 
-To be completed after reviewing the Splunk results.
+The Splunk results show **one network connection** from `powershell.exe` run by user `alex.morgan`.
+
+- **Host:** `ubuntu`
+- **User:** `alex.morgan`
+- **Process:** `powershell.exe`
+- **Destination IP:** `203.0.113.59`
+- **Destination Port:** `443`
 
 ## Analyst Observation
 
-To be completed from the actual evidence.
+The PowerShell process established an **HTTPS connection to `203.0.113.59` on port 443**.
+
+This is suspicious when considered with the earlier evidence of **Encoded PowerShell** and **Execution Policy Bypass**. The connection could indicate communication with an external server or retrieval of a payload.
 
 ## Investigation Decision
 
-To be completed after reviewing the results.
+**Escalate for further investigation.**
 
----
+The analyst should:
+
+- Investigate the destination IP `203.0.113.59`.
+- Review the PowerShell command that initiated the connection.
+- Check for downloaded files or additional network connections.
+- Correlate this event with the previous PowerShell execution events.
+
+**Final Assessment:**  
+The evidence shows **PowerShell communicating with an external IP over HTTPS**, which strengthens the suspicion of potentially malicious PowerShell activity.
 
 # Query 5 — Correlate the Complete Host Activity
 
