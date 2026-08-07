@@ -28,7 +28,7 @@ index=phish001
 
 ## Screenshot
 
-![Query 1 - Find All Case Activity](./screenshots/query-01.png)
+![Query 1 - Find All Case Activity](./screenshots/Query-01.png)
 
 ## Event Details
 
