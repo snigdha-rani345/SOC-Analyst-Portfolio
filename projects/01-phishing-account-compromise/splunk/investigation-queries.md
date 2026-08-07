@@ -161,24 +161,30 @@ index=phish001 src_ip="203.0.113.45"
 
 ![Query 4 - Source IP Activity](./screenshots/Query-04.png)
 
-## Event Details
+### Event Details
 
-- **Event ID:**
-- **Timestamp:**
-- **Username:**
-- **Source IP:**
-- **Event Type:**
-- **Authentication Status:**
-- **Related Activity:**
-- **Other Relevant Information:**
+- Event ID: PHISH-001-AUTHENTICATION
+- Timestamp:
+  - 2026-08-07 14:49:41
+  - 2026-08-07 14:51:03
+  - 2026-08-07 14:52:17
+- Username: alex.morgan
+- Source IP: 203.0.113.45
+- Event Type:
+  - authentication
+  - authentication
+  - session_created
+- Authentication Status: Success
+- Related Activity: Two successful authentication events were followed by a session creation event.
+- Other Relevant Information: All three events originate from the same source IP address.
 
-## Analyst Analysis
+### Analyst Analysis
 
-This query investigates activity associated with the identified source IP
-address. Correlating the Event ID, timestamp, username, and authentication
-status can help determine whether the IP was involved in multiple related
-events.
+The query identifies three events associated with user alex.morgan from source IP 203.0.113.45.
 
+Two successful authentication events occurred at 14:49:41 and 14:51:03. These were followed by a session_created event at 14:52:17.
+
+The sequence indicates that successful authentication was followed by the creation of an active session. Because this activity occurred in the context of the phishing investigation, the source IP and authentication events should be correlated with the phishing URL activity and other account activity to determine whether the access was authorized.
 ---
 
 # Query 5 — Authentication Activity by Source IP
