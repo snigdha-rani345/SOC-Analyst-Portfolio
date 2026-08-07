@@ -185,7 +185,7 @@ index=phish001 event=authentication
 
 ## Screenshot
 
-![Query 5 - Authentication Activity](./Screenshots/Query-05.png)
+![Query 5 - Authentication Activity](./screenshots/Query-05.png)
 
 ## Event Details
 
@@ -222,7 +222,7 @@ index=phish001 event=authentication
 
 ## Screenshot
 
-![Query 6 - Authentication Timeline](./Screenshots/Query-06.png)
+![Query 6 - Authentication Timeline](./screenshots/Query-06.png)
 
 ## Event Details
 
