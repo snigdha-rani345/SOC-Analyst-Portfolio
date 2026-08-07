@@ -71,28 +71,31 @@ index=phish001 event=authentication status=success
 
 ## Screenshot
 
-![Query 1 - Find All Case Activity](./screenshots/Query-02.png)
+![Query 2 - Successful Authentication](./screenshots/Query-02.png)
 
 ## Event Details
 
-- Timestamp:
-- Username:
-- Source IP:
-- Location:
-- Authentication Status:
-- Authentication Event:
-- Other Relevant Information:
+- Timestamp: 2026-08-07 14:49:41 and 2026-08-07 14:51:03
+- Username: alex.morgan
+- Source IP: 203.0.113.45
+- Location: unknown
+- Authentication Status: Success
+- Authentication Event: Successful authentication
+- Other Relevant Information: Two successful authentication events were returned for the affected user.
 
 ## Analyst Analysis
 
-This query identifies successful authentication events associated with the
-investigation. The results provide the timestamp, username, source IP
-address, and location of successful authentication activity.
+This query identified two successful authentication events associated with
+the user alex.morgan.
 
-These events should be correlated with the phishing timeline to determine
-whether the successful authentication occurred after the phishing activity
-and whether the source IP or location appears unusual.
+The events occurred at 14:49:41 and 14:51:03 on 2026-08-07. The presence of
+multiple successful authentication events provides evidence of account
+activity that should be correlated with the phishing timeline.
 
+The source IP address and location should be reviewed in Splunk to determine
+whether the authentication activity originated from an expected source.
+
+---
 # Query 3 — Investigate User Activity
 
 ## Purpose
