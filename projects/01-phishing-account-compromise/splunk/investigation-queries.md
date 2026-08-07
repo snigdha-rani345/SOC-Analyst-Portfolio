@@ -85,6 +85,6 @@ address, and location of successful authentication activity.
 These events should be correlated with the phishing timeline to determine
 whether the successful authentication occurred after the phishing activity
 and whether the source IP or location appears unusual.
----
+
 
 
