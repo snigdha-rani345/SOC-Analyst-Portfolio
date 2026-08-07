@@ -160,7 +160,7 @@ index=phish002 dest_ip="203.0.113.50"
 
 ## Evidence
 
-Screenshot will be added after running the query.
+![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-04-powershell.png)
 
 ## What the Events Show
 
