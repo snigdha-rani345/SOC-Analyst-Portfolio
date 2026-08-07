@@ -206,23 +206,32 @@ index=phish001 event=authentication
 
 ![Query 5 - Authentication Activity](./screenshots/Query-05.png)
 
-## Event Details
+### Event Details
 
-- **Event ID:**
-- **Username:**
-- **Source IP:**
-- **Authentication Status:**
-- **Event Count:**
-- **Suspicious Pattern:**
-- **Other Relevant Information:**
+- Event ID: PHISH-001-AUTH-PATTERN
+- Username: alex.morgan
+- Source IP:
+  - 198.51.100.77
+  - 203.0.113.45
+- Authentication Status:
+  - 198.51.100.77 — failed
+  - 203.0.113.45 — success
+- Event Count:
+  - 198.51.100.77 — 2 failed events
+  - 203.0.113.45 — 2 successful events
+- Suspicious Pattern: Successful authentication activity from 203.0.113.45 and failed authentication activity from 198.51.100.77 were observed for the same user.
+- Other Relevant Information: The results show different authentication outcomes associated with different source IP addresses for alex.morgan.
 
-## Analyst Analysis
+### Analyst Analysis
 
-This query summarizes authentication activity by user, source IP, and
-status. The results can help identify repeated authentication attempts,
-successful logins, or unusual authentication patterns.
+The query summarizes authentication events for alex.morgan by source IP address and authentication status.
 
----
+The results show two successful authentication events from 203.0.113.45 and two failed authentication events from 198.51.100.77.
+
+The presence of successful and failed authentication activity from different source IP addresses should be investigated further. The successful authentication source should be correlated with the earlier phishing URL activity and session creation, while the failed authentication source should be reviewed for possible unauthorized access attempts.
+
+This authentication pattern provides additional evidence for investigating potential account compromise.
+
 
 # Query 6 — Authentication Timeline
 
