@@ -11,9 +11,6 @@ suspicious authentication activity. The investigation focuses on identifying
 the affected user, authentication activity, source IP addresses, locations,
 and other related indicators.
 
----
-
-# Query 1 — Find All Case Activity
 
 ## Purpose
 
