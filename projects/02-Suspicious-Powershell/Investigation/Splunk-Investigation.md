@@ -204,19 +204,35 @@ index=phish002 host="ubuntu"
 ## Evidence
 
 ![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-05-powershell.png)
-## What the Events Show
 
-To be completed after reviewing the Splunk results.
+# What the Events Show
 
-## Analyst Observation
+The Splunk results show **5 events** related to suspicious PowerShell activity by `alex.morgan` on host `WS-FINANCE-07`.
 
-To be completed from the actual evidence.
+- `powershell.exe` was executed with `-NoProfile`, `-ExecutionPolicy Bypass`, and `-EncodedCommand`.
+- A `powershell_execution` event shows `SIMULATED_POWERSHELL_COMMAND`.
+- `powershell.exe` made a network connection to `203.0.113.59` on port `443`.
+- `cmd.exe /c whoami` was executed for user discovery.
+- `certutil.exe` was subsequently executed from the PowerShell process.
 
-## Investigation Decision
+# Analyst Observation
 
-To be completed after reviewing the results.
+The sequence of events is **suspicious**. PowerShell was run with an execution-policy bypass and encoded command, followed by network communication and discovery activity. The use of `certutil.exe` also warrants investigation because it can be used to retrieve files from a remote location.
 
----
+# Investigation Decision
+
+**Escalate for further investigation.**
+
+The analyst should:
+
+1. Decode and analyze the PowerShell encoded command.
+2. Investigate the connection to `203.0.113.59:443`.
+3. Examine the `certutil.exe` command and determine what file was retrieved.
+4. Review additional process and network activity from `alex.morgan`.
+5. Confirm whether the activity was authorized or part of the simulated investigation.
+
+**Final Assessment:**  
+The event sequence is consistent with **suspicious PowerShell execution, network communication, discovery activity, and potential payload retrieval**.
 
 # Investigation Timeline
 
