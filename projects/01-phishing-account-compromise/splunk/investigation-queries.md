@@ -146,7 +146,7 @@ index=phish001 src_ip="203.0.113.45"
 
 ## Screenshot
 
-![Query 4 - Source IP Activity](./Screenshots/Query-04.png)
+![Query 4 - Source IP Activity](./screenshots/Query-04.png)
 
 ## Event Details
 
