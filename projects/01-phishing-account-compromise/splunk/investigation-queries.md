@@ -114,31 +114,34 @@ index=phish001 user=alex.morgan
 
 ![Query 1 - Find All Case Activity](./screenshots/Query-03.png)
 
-## Event Details
+### Event Details
 
-- **Event ID:**
-- **Timestamp:**
-- **Username:**
-- **Event Type:**
-- **Event Status:**
-- **Source IP:**
-- **URL:**
-- **Detection Rule:**
-- **Other Relevant Information:**
+- Event ID: PHISH-001-USER-ACTIVITY
+- Timestamp: 2026-08-07 14:44:32 to 14:56:44
+- Username: alex.morgan
+- Event Type: email_received, url_clicked, authentication, session_created, mailbox_rule_created
+- Event Status: Successful and failed authentication activity observed
+- Source IP:
+  - 10.10.20.45 — URL click activity
+  - 203.0.113.45 — Successful authentication and session activity
+  - 198.51.100.77 — Failed authentication attempts
+- URL: https://login.identity-check.example.test/verify
+- Detection Rule: Move messages to RSS Feeds
+- Other Relevant Information:
+  - Phishing email received at 14:44:32.
+  - Suspicious URL clicked at 14:47:08.
+  - Successful authentication occurred at 14:49:41 and 14:51:03.
+  - A session was created at 14:52:17.
+  - A mailbox rule was created at 14:53:55.
+  - Failed authentication attempts were observed at 14:55:12 and 14:56:44.
 
-## Analyst Analysis
+### Analyst Analysis
 
-This query focuses the investigation on activity associated with the
-affected user account.
+The activity for user alex.morgan shows a chronological sequence beginning with a phishing email, followed by a suspicious URL click and successful authentication activity.
 
-The Event ID and timestamp help correlate individual user events with the
-phishing activity and authentication events identified in the previous
-queries.
+Two successful authentication events were observed after the URL click. A session was subsequently created, followed by the creation of a mailbox rule. Additional failed authentication attempts were then observed from a different source IP address.
 
-Reviewing the source IP, event status, URL, and detection rule can help
-determine whether the account shows signs of suspicious activity.
-
----
+The sequence of events is consistent with potentially suspicious account activity following the phishing event. The authentication sources and mailbox rule activity should be further correlated with the other case evidence.
 
 # Query 4 — Investigate Source IP Activity
 
