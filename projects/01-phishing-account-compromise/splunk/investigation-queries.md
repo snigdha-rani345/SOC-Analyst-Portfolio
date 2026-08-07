@@ -11,6 +11,7 @@ suspicious authentication activity. The investigation focuses on identifying
 the affected user, authentication activity, source IP addresses, locations,
 and other related indicators.
 
+# Query 1 - Find All Case Activity
 
 ## Purpose
 
@@ -60,4 +61,30 @@ index=phish001 event=authentication status=success
 | table _time user src_ip location
 | sort _time
 ```
+
+## Screenshot
+
+![Query 1 - Find All Case Activity](./screenshots/Query-02.png)
+
+## Event Details
+
+- Timestamp:
+- Username:
+- Source IP:
+- Location:
+- Authentication Status:
+- Authentication Event:
+- Other Relevant Information:
+
+## Analyst Analysis
+
+This query identifies successful authentication events associated with the
+investigation. The results provide the timestamp, username, source IP
+address, and location of successful authentication activity.
+
+These events should be correlated with the phishing timeline to determine
+whether the successful authentication occurred after the phishing activity
+and whether the source IP or location appears unusual.
+---
+
 
