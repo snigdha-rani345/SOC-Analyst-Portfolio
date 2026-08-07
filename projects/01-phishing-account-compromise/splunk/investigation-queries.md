@@ -251,24 +251,27 @@ index=phish001 event=authentication
 
 ![Query 6 - Authentication Timeline](./screenshots/Query-06.png)
 
-## Event Details
+### Event Details
 
-- **Event ID:**
-- **Timestamp:**
-- **Username:**
-- **Authentication Status:**
-- **Source IP:**
-- **Location:**
-- **Relationship to Phishing Event:**
-- **Other Relevant Information:**
+- Event ID: Authentication events returned by the query
+- Timestamp: 2026-08-07 14:49:41
+- Username: alex.morgan
+- Authentication Status: Success
+- Source IP: 203.0.113.45
+- Location: Unknown
+- Relationship to Phishing Event: Authentication activity following the suspected phishing event
+- Other Relevant Information: The query returned four authentication events for the user. Two authentication attempts were successful, followed by two failed authentication attempts.
 
-## Analyst Analysis
+### Analyst Analysis
 
-This query provides a chronological view of authentication activity. The
-Event ID and timestamp help establish the sequence of events and determine
-whether suspicious authentication occurred after the phishing activity.
+This query provides a chronological view of authentication activity associated with the affected user, alex.morgan.
 
----
+The results show two successful authentication events followed by two failed authentication attempts. The successful authentication activity originates from source IP 203.0.113.45, while the failed attempts should be reviewed separately to determine whether they originated from a different or suspicious source IP.
+
+The sequence of successful and failed authentication events is relevant to the phishing investigation because it may indicate account activity following the suspected phishing event.
+
+Further investigation should correlate the authentication timestamps, source IP addresses, locations, and other related events to determine whether the activity is legitimate or suspicious.
+
 
 # Investigation Findings
 
