@@ -25,19 +25,18 @@ index=phish002 powershell
 
 ## Evidence
 
-Screenshot will be added after running the query.
+![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-01-powershell.png)
 
 ## What the Events Show
 
-To be completed after reviewing the Splunk results.
+
 
 ## Analyst Observation
 
-To be completed from the actual evidence.
+
 
 ## Investigation Decision
 
-To be completed after reviewing the results.
 
 ---
 
