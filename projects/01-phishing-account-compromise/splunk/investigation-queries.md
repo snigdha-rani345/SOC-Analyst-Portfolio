@@ -273,33 +273,31 @@ The sequence of successful and failed authentication events is relevant to the p
 Further investigation should correlate the authentication timestamps, source IP addresses, locations, and other related events to determine whether the activity is legitimate or suspicious.
 
 
-# Investigation Findings
+## Investigation Findings
 
-## Key Findings
+### Key Findings
 
-- **Phishing Activity:**
-- **Affected User:**
-- **Successful Authentication:**
-- **Suspicious Source IP:**
-- **Geographic Information:**
-- **Important Event IDs:**
-- **Important Timeline Events:**
+- Phishing Activity: A phishing-related email was received and the suspicious URL was clicked by the affected user.
+- Affected User: alex.morgan
+- Successful Authentication: Successful authentication activity was observed from source IP 203.0.113.45.
+- Suspicious Source IP: 198.51.100.77 was associated with failed authentication attempts and should be treated as suspicious.
+- Geographic Information: Location information was unavailable in the returned authentication events.
+- Important Event IDs: Authentication, email_received, url_clicked, session_created, mailbox_rule_created, and failed authentication events were identified.
+- Important Timeline Events: Phishing email received → suspicious URL clicked → successful authentication → session created → mailbox rule created → failed authentication attempts.
 
-## Final Assessment
+### Final Assessment
 
-**Case Status:** [Confirmed Compromise / Suspicious Activity / No Evidence of Compromise]
+Case Status: Confirmed Compromise
 
-**Affected User:** [User]
+Affected User: alex.morgan
 
-**Suspicious Source IP:** [IP Address]
+Suspicious Source IP: 198.51.100.77
 
-**Primary Event ID:** [Event ID]
+Primary Event ID: Authentication / session activity associated with alex.morgan
 
-**Primary Evidence:** [Important evidence identified from Splunk]
+Primary Evidence: The investigation identified phishing-related email activity followed by a URL click, successful authentication from 203.0.113.45, session creation, mailbox rule creation, and subsequent failed authentication attempts from 198.51.100.77.
 
-**Recommended Action:** [Recommended response]
-
----
+Recommended Action: Reset the affected user's password, revoke active sessions, review and remove any unauthorized mailbox rules, investigate the suspicious source IP, and review additional authentication and account activity for signs of persistence or further compromise.
 
 # Conclusion
 
