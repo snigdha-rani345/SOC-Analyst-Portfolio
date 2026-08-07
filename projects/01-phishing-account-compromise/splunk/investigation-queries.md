@@ -25,6 +25,7 @@ the initial timeline of activity.
 ```spl
 index=phish001
 | sort _time
+```
 
 ## Screenshot
 
@@ -61,4 +62,5 @@ Identify successful authentication events associated with the investigation.
 index=phish001 event=authentication status=success
 | table _time user src_ip location
 | sort _time
+```
 
