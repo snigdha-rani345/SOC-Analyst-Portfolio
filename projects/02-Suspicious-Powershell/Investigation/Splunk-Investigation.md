@@ -79,17 +79,31 @@ index=phish002
 
 ## What the Events Show
 
-To be completed after reviewing the Splunk results.
+The Splunk results show **5 suspicious events** involving the user `alex.morgan`:
+
+1. `powershell.exe` executed with `-NoProfile`, `-ExecutionPolicy Bypass`, and `-EncodedCommand`.
+2. A PowerShell command was executed.
+3. A network connection was initiated by `powershell.exe`.
+4. `cmd.exe /c whoami` was executed for user discovery.
+5. `certutil.exe` was used with `-urlcache -split -f` to retrieve `update.txt` from an external URL.
 
 ## Analyst Observation
 
-To be completed from the actual evidence.
+The activity is **suspicious and potentially malicious**. The use of PowerShell with **Execution Policy Bypass** and an **Encoded Command**, followed by `whoami` and `certutil.exe` network activity, indicates possible command execution, discovery, and payload retrieval.
 
 ## Investigation Decision
 
-To be completed after reviewing the results.
+**Escalate for further investigation.**
 
----
+The analyst should:
+
+- Decode and analyze the PowerShell `EncodedCommand`.
+- Investigate the external URL and downloaded `update.txt` file.
+- Review the network connection associated with `powershell.exe`.
+- Check for additional processes, persistence, or follow-up activity.
+- Verify whether the activity was authorized or part of a security simulation.
+
+**Final Assessment:** The events are consistent with **suspicious PowerShell activity and possible payload download**, so the incident should be investigated further.
 
 # Query 3 — Investigate PowerShell Command-Line Activity
 
