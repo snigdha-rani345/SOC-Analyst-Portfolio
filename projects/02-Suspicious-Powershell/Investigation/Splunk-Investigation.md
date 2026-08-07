@@ -68,7 +68,7 @@ The analyst should:
 ## Splunk Query
 
 ```spl
-index=phish002 host="WS-FINANCE-07"
+index=phish002 
 | table _time user event parent_process process command_line
 | sort _time
 ```
