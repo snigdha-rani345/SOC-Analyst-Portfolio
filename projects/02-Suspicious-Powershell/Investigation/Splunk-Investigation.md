@@ -117,7 +117,7 @@ index=phish002 process="powershell.exe"
 
 ## Evidence
 
-Screenshot will be added after running the query.
+![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-03-powershell.png)
 
 ## What the Events Show
 
