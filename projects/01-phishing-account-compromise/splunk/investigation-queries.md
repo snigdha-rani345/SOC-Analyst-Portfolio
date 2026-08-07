@@ -31,14 +31,14 @@ index=phish001
 
 ## Event Details
 
-- ### Timestamp: Multiple events returned; review chronologically
-- Event Type: Email and authentication-related events
-- Username: Visible in the returned event data
-- Source IP: Authentication events contain source IP information
-- Authentication Status: Authentication activity is present in the results
-- Location: Available in the authentication event data
-- URL / Rule: Phishing-related email and authentication indicators are present
-- Other Relevant Information: The results establish the initial timeline for the investigation, including the phishing email and subsequent account activity.
+- Timestamp:  Multiple events returned; review chronologically
+- Event Type:  Email and authentication-related events
+- Username:  Visible in the returned event data
+- Source IP:  Authentication events contain source IP information
+- Authentication Status:  Authentication activity is present in the results
+- Location:  Available in the authentication event data
+- URL / Rule:  Phishing-related email and authentication indicators are present
+- Other Relevant Information:  The results establish the initial timeline for the investigation, including the phishing email and subsequent account activity.
 
 ## Analyst Analysis
 
