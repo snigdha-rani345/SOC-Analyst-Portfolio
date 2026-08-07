@@ -197,14 +197,13 @@ The evidence shows **PowerShell communicating with an external IP over HTTPS**, 
 ## Splunk Query
 
 ```spl
-index=phish002 host="WS-FINANCE-07"
+index=phish002 host="ubuntu"
 | sort _time
 ```
 
 ## Evidence
 
-Screenshot will be added after running the query.
-
+![Splunk Query 1 - PowerShell Activity](../evidence/screenshots/query-05-powershell.png)
 ## What the Events Show
 
 To be completed after reviewing the Splunk results.
