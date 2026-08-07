@@ -29,15 +29,38 @@ index=phish002 powershell
 
 ## What the Events Show
 
+The Splunk events show **suspicious PowerShell activity** on the host.
 
+- **User:** `alex.morgan`
+- Multiple executions of `powershell.exe`
+- PowerShell was executed with suspicious options:
+  - `-NoProfile`
+  - `-ExecutionPolicy Bypass`
+  - `-EncodedCommand`
+- A simulated PowerShell command was executed.
+- `cmd.exe /c whoami` was used to identify the current user.
+- `certutil.exe` was used with `-urlcache -split -f` to download a file from an external URL.
 
 ## Analyst Observation
 
+The activity is **suspicious and potentially malicious**.
 
+The combination of **ExecutionPolicy Bypass**, **EncodedCommand**, user discovery using `whoami`, and the use of **certutil.exe for downloading a file** are common indicators of attacker activity.
 
 ## Investigation Decision
 
+**Decision: Escalate for further investigation.**
 
+The analyst should:
+
+1. Decode and analyze the PowerShell `EncodedCommand`.
+2. Investigate the URL and file associated with `certutil.exe`.
+3. Check for persistence mechanisms and additional processes.
+4. Review authentication and endpoint logs for `alex.morgan`.
+5. Confirm whether this activity was authorized or part of a security simulation.
+
+**Overall Assessment:**  
+> Suspicious PowerShell execution with potential payload download. The activity should be investigated further as a potential security incident.
 ---
 
 # Query 2 — Investigate the Suspicious Host
