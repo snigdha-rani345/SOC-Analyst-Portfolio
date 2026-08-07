@@ -31,7 +31,7 @@ index=phish001
 
 ## Event Details
 
-- Timestamp: Multiple events returned; review chronologically
+- ### Timestamp: Multiple events returned; review chronologically
 - Event Type: Email and authentication-related events
 - Username: Visible in the returned event data
 - Source IP: Authentication events contain source IP information
