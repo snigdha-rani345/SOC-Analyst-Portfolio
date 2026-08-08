@@ -79,7 +79,7 @@ Wazuh detected failed SSH authentication attempts against the Ubuntu endpoint.
 
 ### Screenshot
 
-![Wazuh SSH Failed Login Detection](evidence/wazuh-ssh-failed-login.png)
+![Wazuh SSH Failed Login Detection](Evidence/wazuh-ssh-failed-login.png)
 
 ## Key Investigation Questions
 
