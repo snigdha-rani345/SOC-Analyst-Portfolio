@@ -44,6 +44,6 @@ For a SOC analyst, repeated Event ID 4625 alerts from the same source or against
 
 ## Evidence
 
-![Wazuh Windows Failed Logon Event](./Evidence/wazuh-windows-failed-login.png)
+![Wazuh Windows Failed Logon Event](../Evidence/wazuh-windows-failed-login.png)
 
 **Evidence:** Wazuh Events dashboard showing the Windows failed-logon event.
