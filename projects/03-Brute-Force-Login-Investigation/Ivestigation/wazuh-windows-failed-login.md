@@ -1,65 +1,49 @@
-# Windows Failed Logon Evidence
+# Windows Failed Logon Investigation
 
-## Event Summary
-
-This evidence was collected from the Windows endpoint monitored by Wazuh.
+## Overview
 
 - **Event Type:** Failed Windows Logon
 - **Windows Event ID:** 4625
-- **Agent:** Windows
+- **Operating System:** Windows
 - **Agent ID:** 004
+- **Agent Name:** Windows
 - **Detection Platform:** Wazuh
 - **Authentication Result:** Failed
 - **Purpose:** Controlled SOC lab investigation
 
 ## Investigation Evidence
 
-The following screenshot shows the Windows failed-logon event detected by Wazuh.
+The following screenshot shows a Windows failed-logon event detected and displayed by Wazuh.
 
-![Windows Failed Logon Event](../Evidence/wazuh-windows-failed-login.png)
+The Wazuh Events view contains the following relevant event:
 
-## Important Event Details
-
-| Field | Value |
-|---|---|
-| Event ID | 4625 |
-| Account | `<account shown in event>` |
-| Source IP | `<source IP shown in event>` |
-| Timestamp | `<timestamp shown in event>` |
-| Logon Type | `<logon type shown in event>` |
-| Failure Reason | `<failure reason shown in event>` |
-| Host | Windows endpoint |
+- **Event Description:** Logon Failure – Unknown user or bad password
+- **Agent:** Windows
+- **Agent ID:** 004
+- **Windows Event ID:** 4625
+- **Event Type:** Failed Logon
+- **Result:** Authentication failed
 
 ## Analysis
 
-Event ID 4625 indicates that a Windows logon attempt failed.
+Windows Event ID 4625 indicates that a logon attempt failed. In this lab, Wazuh successfully collected the Windows security event and displayed it in the Events view.
 
-A single failed authentication event does not by itself prove a brute-force attack. Multiple failed attempts occurring repeatedly within a short period, especially from the same source IP or against multiple accounts, would provide stronger evidence of brute-force behavior.
+The event description **"Logon Failure – Unknown user or bad password"** indicates that the authentication attempt was unsuccessful because the supplied account information was not accepted.
 
-## SOC Assessment
+## SOC Relevance
 
-The event is classified as:
+A failed Windows logon can be caused by:
 
-**Failed Authentication Attempt — Requires Correlation**
+- Incorrect credentials
+- An incorrect username
+- A mistyped password
+- An expired or disabled account
+- Repeated authentication attempts that may require further investigation
 
-Additional 4625 events should be correlated by:
+For a SOC analyst, repeated Event ID 4625 alerts from the same source or against the same account should be investigated for possible brute-force or password-spraying activity.
 
-- Source IP address
-- Target username
-- Number of attempts
-- Time interval
-- Target host
-- Any subsequent successful Event ID 4624
+## Evidence
 
-## Evidence Status
+![Wazuh Windows Failed Logon Event](./Evidence/wazuh-windows-failed-login.png)
 
-- [x] Windows agent active
-- [x] Wazuh receiving Windows telemetry
-- [x] Failed-logon event identified
-- [ ] Multiple failed attempts correlated
-- [ ] Successful login correlation performed
-- [ ] Final brute-force determination completed
-
-## Conclusion
-
-The observed Event ID 4625 confirms a failed Windows authentication attempt. Further event correlation is required before conclusively classifying the activity as a brute-force attack.
+**Evidence:** Wazuh Events dashboard showing the Windows failed-logon event.
