@@ -59,28 +59,6 @@ SOC Response
 - Windows Security Event Logs
 - MITRE ATT&CK
 - GitHub
-
-## Evidence
-
-### Wazuh SSH Authentication Detection
-
-Wazuh detected failed SSH authentication attempts against the Ubuntu endpoint.
-
-- Source machine: Kali Linux
-- Source IP: 192.168.1.184
-- Target machine: Ubuntu
-- Target IP: 192.168.1.4
-- Detection source: Wazuh
-- Rule ID: 5710
-- Rule level: 5
-- Detection: Attempt to login using a non-existent user
-- Search used: `Failed password`
-- Events observed: 5
-
-### Screenshot
-
-![Wazuh SSH Failed Login Detection](Evidence/wazuh-ssh-failed-login.png)
-
 ## Key Investigation Questions
 
 1. Which account was targeted?
