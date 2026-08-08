@@ -62,19 +62,24 @@ SOC Response
 
 ## Evidence
 
-The investigation will use simulated authentication telemetry.
+### Wazuh SSH Authentication Detection
 
-Evidence will include:
+Wazuh detected failed SSH authentication attempts against the Ubuntu endpoint.
 
-- Failed authentication attempts
-- Successful authentication event
-- Username
-- Source IP address
-- Destination host
-- Authentication timestamps
-- Wazuh alert information
+- Source machine: Kali Linux
+- Source IP: 192.168.1.184
+- Target machine: Ubuntu
+- Target IP: 192.168.1.4
+- Detection source: Wazuh
+- Rule ID: 5710
+- Rule level: 5
+- Detection: Attempt to login using a non-existent user
+- Search used: `Failed password`
+- Events observed: 5
 
-> All data in this project is fictional and created for cybersecurity training.
+### Screenshot
+
+![Wazuh SSH Failed Login Detection](evidence/wazuh-ssh-failed-login.png)
 
 ## Key Investigation Questions
 
