@@ -1,0 +1,45 @@
+BRUTE-001 — AUTHENTICATION EVENT EVIDENCE
+
+Case ID:
+BRUTE-001
+
+Investigation:
+Brute-Force Login Investigation
+
+Detection Source:
+Wazuh
+
+Target Host:
+TBD
+
+Target User:
+TBD
+
+Source IP:
+TBD
+
+Time Range:
+TBD
+
+Failed Authentication Attempts:
+TBD
+
+Successful Authentication:
+TBD
+
+Wazuh Alert:
+TBD
+
+MITRE ATT&CK Technique:
+TBD
+
+Analyst Notes:
+TBD
+
+Investigation Status:
+Evidence Collection
+
+Simulation Notice:
+This file will contain evidence collected from the authorized
+cybersecurity lab environment. No real external systems are
+being targeted.
